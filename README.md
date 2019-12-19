@@ -7,7 +7,7 @@ __Instalación:__
 **Resumen:**
 * Este proyecto tiene como objetivo desarrollar una función que devuelva una línea que se termine con un salto de línea, leída desde un descriptor de archivo.
 
-**Parte Obligatoria - Get_next_line:**
+**Parte Obligatoria:**
 * Escriba un función que devuelva une línea leída desde un file descriptor, sin el salto de línea.
 
 **Bonus:**

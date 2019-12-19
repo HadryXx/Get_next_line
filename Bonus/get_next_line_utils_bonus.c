@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aballest <aballest@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/24 03:12:33 by aballest          #+#    #+#             */
-/*   Updated: 2019/11/26 17:36:37 by aballest         ###   ########.fr       */
+/*   Created: 2019/12/17 20:22:05 by aballest          #+#    #+#             */
+/*   Updated: 2019/12/19 15:26:01 by aballest         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ size_t		ft_strlen(const char *s)
 	return (i);
 }
 
+void		ft_strdel(char **s)
+{
+	if (s)
+	{
+		free(*s);
+		*s = NULL;
+	}
+}
+
 char		*ft_strchr(const char *s, int c)
 {
 	char *str;
@@ -33,28 +42,6 @@ char		*ft_strchr(const char *s, int c)
 			return (0);
 		str++;
 	}
-	return (str);
-}
-
-char		*ft_strdup(const char *src)
-{
-	char			*str;
-	unsigned int	len;
-	unsigned int	i;
-
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	str = (char*)malloc(sizeof(*str) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	while (i < len)
-	{
-		str[i] = src[i];
-		i++;
-	}
-	str[i] = '\0';
 	return (str);
 }
 
